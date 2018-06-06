@@ -106,4 +106,4 @@ class Profesor(models.Model):
     description = models.TextField(blank=True)
 
     def __str__(self):
-        return "%s %s".format(self.nombres, self.apellidos)
+        return "{} {}".format(self.nombres, self.apellidos)
