@@ -53,7 +53,7 @@ class AsistenteSerializer(ModelSerializer):
 
 class ProfesorSerializer(ModelSerializer):
     class Meta:
-        model = models.Asistente
+        model = models.Profesor
         fields = '__all__'
 
 
