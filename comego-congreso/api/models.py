@@ -99,7 +99,7 @@ class ProfesorCategory(models.Model):
 
 
 class Profesor(models.Model):
-    category = models.ForeignKey(ProfesorCategory, related_name='profesor_category', on_delete=models.CASCADE)
+    category = models.ForeignKey(ProfesorCategory, related_name='profesores', on_delete=models.CASCADE)
     nombres = models.CharField(max_length=50)
     apellidos = models.CharField(max_length=50)
     picture = models.ImageField(null=True, blank=True)

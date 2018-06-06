@@ -43,3 +43,23 @@ class SponsorSerializer(ModelSerializer):
     class Meta:
         model = models.Sponsor
         fields = '__all__'
+
+
+class AsistenteSerializer(ModelSerializer):
+    class Meta:
+        model = models.Asistente
+        fields = '__all__'
+
+
+class ProfesorSerializer(ModelSerializer):
+    class Meta:
+        model = models.Asistente
+        fields = '__all__'
+
+
+class ProfesorCategorySerializer(ModelSerializer):
+    profesores = ProfesorSerializer(many=True)
+
+    class Meta:
+        model = models.ProfesorCategory
+        fields = '__all__'

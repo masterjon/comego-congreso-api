@@ -28,3 +28,13 @@ class CategoryNestedItemViewSet(ModelViewSet):
 class SponsorViewSet(ModelViewSet):
     queryset = models.Sponsor.objects.all()
     serializer_class = serializers.SponsorSerializer
+
+
+class AsistenteViewSet(ModelViewSet):
+    queryset = models.Asistente.objects.all()
+    serializer_class = serializers.AsistenteSerializer
+
+
+class ProfesorCategoryViewSet(ModelViewSet):
+    queryset = models.ProfesorCategory.objects.all()
+    serializer_class = serializers.ProfesorCategorySerializer
