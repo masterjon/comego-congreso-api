@@ -103,7 +103,7 @@ class Profesor(models.Model):
     nombres = models.CharField(max_length=50)
     apellidos = models.CharField(max_length=50)
     picture = models.ImageField(null=True, blank=True)
-    description = models.TextField(blank=True)
+    description = RichTextField(blank=True)
 
     def __str__(self):
         return "{} {}".format(self.nombres, self.apellidos)
