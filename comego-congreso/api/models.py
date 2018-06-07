@@ -85,7 +85,7 @@ class Asistente(models.Model):
     apellidos = models.CharField(max_length=50)
 
     def __str__(self):
-        return "%s %s".format(self.nombres, self.apellidos)
+        return "{} {}".format(self.nombres, self.apellidos)
 
 
 class ProfesorCategory(models.Model):
