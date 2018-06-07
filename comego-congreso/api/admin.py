@@ -37,3 +37,8 @@ class ProfesorCategoryAdmin(admin.ModelAdmin):
 @admin.register(models.Profesor)
 class ProfesorAdmin(admin.ModelAdmin):
     pass
+
+
+@admin.register(models.Asistente)
+class AsistenteAdmin(admin.ModelAdmin):
+    pass
