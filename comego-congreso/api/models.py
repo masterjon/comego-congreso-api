@@ -7,7 +7,7 @@ class CategoryItem(models.Model):
     title = models.CharField(max_length=50)
     picture = models.ImageField(null=True, blank=True)
     ordering = models.PositiveSmallIntegerField(default=0)
-    link = models.URLField(blank=True)
+    link = models.URLField(blank=True, max_length=500)
 
     class Meta:
         verbose_name_plural = 'Categorias'
@@ -50,8 +50,8 @@ class Actividad(models.Model):
     description = RichTextField()
     salon = models.ForeignKey(Salon, on_delete=models.CASCADE)
     dress_code = models.CharField('Código de vestir', choices=dress_options, max_length=50)
-    academic_program_url = models.URLField('Url Programa Académico', blank=True)
-    inscription_url = models.URLField('Url Inscripción', blank=True)
+    academic_program_url = models.URLField('Url Programa Académico', blank=True, max_length=500)
+    inscription_url = models.URLField('Url Inscripción', blank=True, max_length=500)
     ordering = models.PositiveSmallIntegerField(default=0)
     month = models.CharField(max_length=50, null=False, blank=True, default='')
 
@@ -69,7 +69,7 @@ class Actividad(models.Model):
 class Sponsor(models.Model):
     title = models.CharField('Título', max_length=50)
     description = models.TextField(blank=True)
-    link = models.URLField()
+    link = models.URLField(max_length=500)
     picture = models.ImageField(null=True, blank=True)
     ordering = models.PositiveSmallIntegerField(default=0)
 
@@ -83,6 +83,9 @@ class Sponsor(models.Model):
 class Asistente(models.Model):
     nombres = models.CharField(max_length=50)
     apellidos = models.CharField(max_length=50)
+
+    class Meta:
+        ordering = ['nombres']
 
     def __str__(self):
         return "{} {}".format(self.nombres, self.apellidos)
