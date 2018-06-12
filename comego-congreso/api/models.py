@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from ckeditor.fields import RichTextField
+from colorful.fields import RGBColorField
 
 
 class CategoryItem(models.Model):
     title = models.CharField(max_length=50)
     picture = models.ImageField(null=True, blank=True)
     ordering = models.PositiveSmallIntegerField(default=0)
+    color = RGBColorField()
     link = models.URLField(blank=True, max_length=500)
 
     class Meta:
