@@ -68,6 +68,13 @@ class Actividad(models.Model):
         super(Actividad, self).save(*args, **kwargs)
 
 
+class Presentacion(models.Model):
+    actividad = models.ForeignKey(Actividad, related_name='presentaciones', on_delete=models.CASCADE)
+    title = models.CharField('Título', max_length=300)
+    doctor = models.CharField(max_length=100)
+    pdf = models.URLField('PDF', blank=True)
+
+
 class Sponsor(models.Model):
     title = models.CharField('Título', max_length=50)
     description = models.TextField(blank=True)

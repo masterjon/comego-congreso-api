@@ -17,11 +17,22 @@ class SalonAdmin(admin.ModelAdmin):
     pass
 
 
+class PresentacionTabAdmin(admin.TabularInline):
+    model = models.Presentacion
+
+
 @admin.register(models.Actividad)
 class ActividadAdmin(admin.ModelAdmin):
     readonly_fields = ('month',)
     list_display = ["title", "category", "start_date", "ordering"]
     list_filter = ["category"]
+    inlines = [PresentacionTabAdmin]
+
+
+@admin.register(models.Presentacion)
+class PresentacionAdmin(admin.ModelAdmin):
+    list_display = ["title", "actividad"]
+    list_filter = ["actividad"]
 
 
 @admin.register(models.Sponsor)
