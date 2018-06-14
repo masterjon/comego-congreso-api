@@ -72,7 +72,8 @@ class Presentacion(models.Model):
     actividad = models.ForeignKey(Actividad, related_name='presentaciones', on_delete=models.CASCADE)
     title = models.CharField('Título', max_length=300)
     doctor = models.CharField(max_length=100)
-    pdf = models.URLField('PDF', blank=True)
+    horario = models.CharField(max_length=100)
+    pdf = models.FileField(null=True)
 
 
 class Sponsor(models.Model):

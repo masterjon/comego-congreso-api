@@ -17,7 +17,7 @@ class SalonAdmin(admin.ModelAdmin):
     pass
 
 
-class PresentacionTabAdmin(admin.TabularInline):
+class PresentacionTabAdmin(admin.StackedInline):
     model = models.Presentacion
 
 
