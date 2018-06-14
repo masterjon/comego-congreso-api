@@ -73,7 +73,14 @@ class Presentacion(models.Model):
     title = models.CharField('Título', max_length=300)
     doctor = models.CharField(max_length=100)
     horario = models.CharField(max_length=100)
-    pdf = models.FileField(null=True)
+    pdf = models.FileField(null=True, blank=True)
+    ordering = models.PositiveSmallIntegerField(default=0)
+
+    class Meta:
+        ordering = ['ordering']
+
+    def __str__(self):
+        return self.title
 
 
 class Sponsor(models.Model):
