@@ -125,4 +125,4 @@ class Profesor(models.Model):
     description = RichTextField(blank=True)
 
     def __str__(self):
-        return "{} {}".format(self.nombres)
+        return self.nombres
