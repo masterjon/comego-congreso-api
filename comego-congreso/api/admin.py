@@ -9,6 +9,11 @@ class AsistenteResource(resources.ModelResource):
         model = models.Asistente
 
 
+class ProfesorResource(resources.ModelResource):
+    class Meta:
+        model = models.Profesor
+
+
 @admin.register(models.CategoryItem)
 class CategoryItemAdmin(admin.ModelAdmin):
     pass
@@ -53,8 +58,8 @@ class ProfesorCategoryAdmin(admin.ModelAdmin):
 
 
 @admin.register(models.Profesor)
-class ProfesorAdmin(admin.ModelAdmin):
-    pass
+class ProfesorAdmin(ImportExportModelAdmin):
+    resource_class = ProfesorResource
 
 
 @admin.register(models.Asistente)
