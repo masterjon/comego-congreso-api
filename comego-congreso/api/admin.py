@@ -59,6 +59,8 @@ class ProfesorCategoryAdmin(admin.ModelAdmin):
 
 @admin.register(models.Profesor)
 class ProfesorAdmin(ImportExportModelAdmin):
+    list_display = ["nombres", "category"]
+    list_filter = ["category"]
     resource_class = ProfesorResource
 
 
