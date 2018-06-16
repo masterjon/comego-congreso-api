@@ -124,5 +124,8 @@ class Profesor(models.Model):
     picture = models.ImageField(null=True, blank=True)
     description = RichTextField(blank=True)
 
+    class Meta:
+        ordering = ['nombres']
+
     def __str__(self):
         return self.nombres
