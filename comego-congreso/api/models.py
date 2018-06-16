@@ -59,6 +59,7 @@ class Actividad(models.Model):
 
     class Meta:
         verbose_name_plural = 'Actividades'
+        ordering = ['start_date', 'ordering']
 
     def __str__(self):
         return self.title
