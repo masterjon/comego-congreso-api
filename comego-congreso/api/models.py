@@ -99,14 +99,13 @@ class Sponsor(models.Model):
 
 
 class Asistente(models.Model):
-    nombres = models.CharField(max_length=50)
-    apellidos = models.CharField(max_length=50)
+    nombre = models.CharField(max_length=100)
 
     class Meta:
-        ordering = ['nombres']
+        ordering = ['nombre']
 
     def __str__(self):
-        return "{} {}".format(self.nombres, self.apellidos)
+        return self.nombre
 
 
 class ProfesorCategory(models.Model):
@@ -121,10 +120,9 @@ class ProfesorCategory(models.Model):
 
 class Profesor(models.Model):
     category = models.ForeignKey(ProfesorCategory, related_name='profesores', on_delete=models.CASCADE)
-    nombres = models.CharField(max_length=50)
-    apellidos = models.CharField(max_length=50)
+    nombres = models.CharField(max_length=100)
     picture = models.ImageField(null=True, blank=True)
     description = RichTextField(blank=True)
 
     def __str__(self):
-        return "{} {}".format(self.nombres, self.apellidos)
+        return "{} {}".format(self.nombres)

@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'ckeditor',
     'api',
-    'colorful'
+    'colorful',
+    'import_export',
 ]
 
 MIDDLEWARE = [

@@ -1,5 +1,12 @@
 from django.contrib import admin
 from . import models
+from import_export import resources
+from import_export.admin import ImportExportModelAdmin
+
+
+class AsistenteResource(resources.ModelResource):
+    class Meta:
+        model = models.Asistente
 
 
 @admin.register(models.CategoryItem)
@@ -51,5 +58,5 @@ class ProfesorAdmin(admin.ModelAdmin):
 
 
 @admin.register(models.Asistente)
-class AsistenteAdmin(admin.ModelAdmin):
-    pass
+class AsistenteAdmin(ImportExportModelAdmin):
+    resource_class = AsistenteResource
