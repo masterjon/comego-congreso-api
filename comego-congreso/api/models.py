@@ -27,7 +27,7 @@ class ActivityCategory(models.Model):
         verbose_name_plural = 'Categorias de Actividades'
 
     def __str__(self):
-        return self.title
+        return "{} - {}".format(self.category.title, self.title)
 
 
 class Salon(models.Model):
