@@ -87,7 +87,7 @@ class Presentacion(models.Model):
 class Sponsor(models.Model):
     title = models.CharField('Título', max_length=50)
     description = models.TextField(blank=True)
-    link = models.URLField(max_length=500)
+    link = models.URLField(max_length=500, blank=True)
     picture = models.ImageField(null=True, blank=True)
     ordering = models.PositiveSmallIntegerField(default=0)
 
