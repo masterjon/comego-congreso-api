@@ -68,4 +68,4 @@ class ProfesorAdmin(ImportExportModelAdmin):
 @admin.register(models.Asistente)
 class AsistenteAdmin(ImportExportModelAdmin):
     resource_class = AsistenteResource
-    search_field = ["nombre"]
+    search_fields = ["nombre"]
