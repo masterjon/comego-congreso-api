@@ -145,7 +145,7 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
-
+FILE_UPLOAD_PERMISSIONS = 0o644
 
 CKEDITOR_CONFIGS = {
     'default': {
