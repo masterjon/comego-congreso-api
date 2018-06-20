@@ -21,7 +21,8 @@ class CategoryItemAdmin(admin.ModelAdmin):
 
 @admin.register(models.ActivityCategory)
 class ActivityCategoryAdmin(admin.ModelAdmin):
-    pass
+    list_display = ["title", "category", "ordering"]
+    list_filter = ["category"]
 
 
 @admin.register(models.Salon)

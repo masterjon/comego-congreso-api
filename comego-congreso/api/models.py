@@ -26,6 +26,7 @@ class ActivityCategory(models.Model):
 
     class Meta:
         verbose_name_plural = 'Categorias de Actividades'
+        ordering = ['ordering']
 
     def __str__(self):
         return "{} - {}".format(self.category.title, self.title)
