@@ -13,7 +13,7 @@ class PresentacionSerializer(ModelSerializer):
 
 
 class ActividadSerializer(ModelSerializer):
-    category = ReadOnlyField(source='category.title')
+    category = ReadOnlyField(source='category.category.title')
     salon = ReadOnlyField(source='salon.title')
     presentaciones = PresentacionSerializer(many=True)
 
