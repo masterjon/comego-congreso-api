@@ -101,6 +101,7 @@ class Sponsor(models.Model):
 
 
 class Asistente(models.Model):
+    folio = models.IntegerField()
     nombre = models.CharField(max_length=100)
 
     class Meta:
