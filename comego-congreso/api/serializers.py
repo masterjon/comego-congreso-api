@@ -71,3 +71,9 @@ class ProfesorCategorySerializer(ModelSerializer):
     class Meta:
         model = models.ProfesorCategory
         fields = '__all__'
+
+
+class AnuncioSerializer(ModelSerializer):
+    class Meta:
+        model = models.Anuncio
+        fields = '__all__'

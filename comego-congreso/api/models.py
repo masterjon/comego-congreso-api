@@ -132,3 +132,16 @@ class Profesor(models.Model):
 
     def __str__(self):
         return self.nombres
+
+
+class Anuncio(models.Model):
+    title = models.CharField(max_length=50)
+    picture = models.ImageField()
+    link = models.URLField(max_length=500, blank=True)
+    ordering = models.PositiveSmallIntegerField(default=0)
+
+    class Meta:
+        ordering = ['ordering']
+
+    def __str__(self):
+        return self.title

@@ -12,6 +12,8 @@ router.register(r'actividades', views.CategoryNestedItemViewSet)
 router.register(r'asistentes', views.AsistenteViewSet)
 router.register(r'profesores', views.ProfesorCategoryViewSet)
 router.register(r'sponsors', views.SponsorViewSet)
+router.register(r'anuncios', views.AnuncioViewSet)
+
 # router.register(r'categories', views.AnimalCategoryViewSet, base_name='categories')
 # router.register(r'markers-categories', views.CategoryMarkerViewSet, base_name='categories_markers')
 

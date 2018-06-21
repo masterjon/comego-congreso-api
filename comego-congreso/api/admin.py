@@ -69,3 +69,8 @@ class ProfesorAdmin(ImportExportModelAdmin):
 class AsistenteAdmin(ImportExportModelAdmin):
     resource_class = AsistenteResource
     search_fields = ["nombre"]
+
+
+@admin.register(models.Anuncio)
+class AnuncioAdmin(admin.ModelAdmin):
+    pass

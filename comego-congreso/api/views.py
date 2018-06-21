@@ -38,3 +38,8 @@ class AsistenteViewSet(ModelViewSet):
 class ProfesorCategoryViewSet(ModelViewSet):
     queryset = models.ProfesorCategory.objects.all()
     serializer_class = serializers.ProfesorCategorySerializer
+
+
+class AnuncioViewSet(ModelViewSet):
+    queryset = models.Anuncio.objects.all()
+    serializer_class = serializers.AnuncioSerializer
