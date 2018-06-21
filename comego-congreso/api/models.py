@@ -136,7 +136,7 @@ class Profesor(models.Model):
 
 class Anuncio(models.Model):
     title = models.CharField(max_length=50)
-    picture = models.ImageField("694 × 124")
+    picture = models.ImageField(help_text="694 × 124")
     link = models.URLField(max_length=500, blank=True)
     ordering = models.PositiveSmallIntegerField(default=0)
 
