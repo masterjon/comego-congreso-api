@@ -14,8 +14,10 @@ class PresentacionSerializer(ModelSerializer):
 
 class ActividadSerializer(ModelSerializer):
     category = ReadOnlyField(source='category.category.title')
+    category_id = ReadOnlyField(source='category.category.pk')
     color = ReadOnlyField(source='category.category.color')
     salon = ReadOnlyField(source='salon.title')
+
 
     presentaciones = PresentacionSerializer(many=True)
 
