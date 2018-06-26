@@ -44,6 +44,7 @@ class Salon(models.Model):
 
 class Actividad(models.Model):
     dress_options = (
+        ('na', 'N/A',),
         ('formal', 'Formal',),
         ('casual', 'Casual',)
     )
